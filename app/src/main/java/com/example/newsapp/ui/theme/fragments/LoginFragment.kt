@@ -31,7 +31,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 //        }
 //    }
 
-//    03A9F4
+//
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
