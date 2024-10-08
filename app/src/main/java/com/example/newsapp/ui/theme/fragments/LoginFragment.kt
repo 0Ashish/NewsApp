@@ -31,7 +31,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 //        }
 //    }
 
-//
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -55,6 +54,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                              val navOptions = NavOptions.Builder()
                                  .setPopUpTo(R.id.loginFragment, true)  // inclusive = true
                                  .build()
+
 
                              // Navigate to headlineFragment with NavOptions
                              Log.d("LoginFragment", "Navigating to HeadlineFragment with popUpTo")

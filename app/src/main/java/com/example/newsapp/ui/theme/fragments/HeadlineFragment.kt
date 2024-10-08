@@ -51,6 +51,7 @@ class HeadlineFragment : Fragment(R.layout.fragment_headline) {
             findNavController().navigate(R.id.action_headlineFragment2_to_articleFragment,bundle)
         }
 
+
         newsViewModel.headlines.observe(viewLifecycleOwner, Observer { response->
             when(response){
                 is Resource.Error<*> -> {
