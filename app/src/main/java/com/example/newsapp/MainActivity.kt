@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         lateinit var newsViewModel : NewsViewModel
         lateinit var binding : ActivityMainBinding
         private lateinit var auth : FirebaseAuth
-        lateinit var drawerLayout: DrawerLayout
 
 
         override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,7 +63,6 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-            drawerLayout = binding.drawerLayout
         }
 
 
@@ -89,5 +87,4 @@ class MainActivity : AppCompatActivity() {
                     .build()
             )
         }
-
 }

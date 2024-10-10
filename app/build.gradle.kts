@@ -1,8 +1,8 @@
 plugins {
-    id("com.android.application") version "8.5.2"
+    id("com.android.application") version "8.6.1"
     id("org.jetbrains.kotlin.android") version "1.9.0"
     id("com.google.devtools.ksp") version "1.9.0-1.0.13"
-    id ("androidx.navigation.safeargs.kotlin") version "2.8.0"
+    id ("androidx.navigation.safeargs.kotlin") version "2.8.2"
     alias(libs.plugins.google.gms.google.services)
 
 }
@@ -24,7 +24,7 @@ android {
         }
     }
     buildTypes {
-        release {
+        getByName("release") {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -32,6 +32,15 @@ android {
             )
         }
     }
+    signingConfigs {
+        create("release") {
+            keyAlias = "newsappkey"
+            keyPassword = "news7275"
+            storeFile = file("C:/Users/royal/project/androidkeys.jks")
+            storePassword = "your-store-password"
+        }
+    }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -39,20 +48,18 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        viewBinding = true
-        compose = true
+
+    viewBinding{
+        enable = true
     }
     dataBinding{
         enable = true
     }
+
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.3"
     }
 }
-
-
-
 
 dependencies {
 
